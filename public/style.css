@@ -45,8 +45,20 @@ header {
 }
 
 /* use this style instead of html style="clear: both" */
-.clearfix::after {
+/* .clearfix::after {
   display: block;
   content: " ";
+  clear: both;
+} */
+
+/* use the ::before and ::after pseudo elements with table */
+/* this block is better than the previous because it fixes the margin 
+  collapsing for the before element (elements at start of main container) */
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  content: " ";
+}
+.clearfix::after {
   clear: both;
 }
