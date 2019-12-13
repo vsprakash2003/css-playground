@@ -36,9 +36,18 @@ header {
   border-radius: 0.5em;
 }
 
-.media {
+/* .media {
   float: left;
   width: 50%;
+  padding: 1.5em;
+  background-color: #eee;
+  border-radius: 0.5em;
+} */
+
+.media {
+  float: left;
+  margin: 0 1.5em 1.5em 0; /* add gutter */
+  width: calc(50% - 1.5em); /* width-margin to avoid unwanted wrapping */
   padding: 1.5em;
   background-color: #eee;
   border-radius: 0.5em;
