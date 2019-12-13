@@ -44,6 +44,12 @@ header {
   border-radius: 0.5em;
 }
 
+/* use the :nth-child(odd) pseudo selector to ensure that every odd
+   element clears the float above it */
+   .media:nth-child(odd) {
+    clear: left;
+  }
+
 /* use this style instead of html style="clear: both" */
 /* .clearfix::after {
   display: block;
