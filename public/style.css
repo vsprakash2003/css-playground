@@ -43,3 +43,10 @@ header {
   background-color: #eee;
   border-radius: 0.5em;
 }
+
+/* use this style instead of html style="clear: both" */
+.clearfix::after {
+  display: block;
+  content: " ";
+  clear: both;
+}
