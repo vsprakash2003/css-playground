@@ -31,7 +31,8 @@ header {
 }
 
 .main {
-  padding: 0 1.5em;
+  /* padding: 0 1.5em; */
+  padding: 0 1.5em 1.5em; /* add 1.5em bottom padding */
   background-color: #fff;
   border-radius: 0.5em;
 }
@@ -46,8 +47,8 @@ header {
 
 .media {
   float: left;
-  margin: 0 1.5em 1.5em 0; /* add gutter */
-  width: calc(50% - 1.5em); /* width-margin to avoid unwanted wrapping */
+  /*margin: 0 1.5em 1.5em 0;*/ /* add gutter */
+  /*width: calc(50% - 1.5em);*/ /* width-margin to avoid unwanted wrapping */
   padding: 1.5em;
   background-color: #eee;
   border-radius: 0.5em;
@@ -55,9 +56,9 @@ header {
 
 /* use the :nth-child(odd) pseudo selector to ensure that every odd
    element clears the float above it */
-   .media:nth-child(odd) {
+   /* .media:nth-child(odd) {
     clear: left;
-  }
+  } */
 
 /* use this style instead of html style="clear: both" */
 /* .clearfix::after {
@@ -93,3 +94,29 @@ header {
  .media-body h4 {
   margin-top: 0; /* override top margin created by user agent */
 }
+
+/* use the grid style to render the elements in 2 6 column formats */
+.row::after {
+  content: " "; /*same as clearfix */
+  display: block;
+  clear: both;
+}
+
+/* target all class columns for floating left */
+[class*="column-"] {
+  float: left;
+}
+
+/* calculate the column width of each column based on 12 column format */
+.column-1 { width: 8.3333%; } /* 1/12 */
+.column-2 { width: 16.6667%; } /* 2/12 */
+.column-3 { width: 25%; } /* 3/12 */
+.column-4 { width: 33.3333%; } /* 4/12 */
+.column-5 { width: 41.6667%; } /* 5/12 */
+.column-6 { width: 50%; } /* 6/12 */
+.column-7 { width: 58.3333%; } /* 7/12 */
+.column-8 { width: 66.6667%; } /* 8/12 */
+.column-9 { width: 75%; } /* 9/12 */
+.column-10 { width: 83.3333%; } /* 10/12 */
+.column-11 { width: 91.6667% } /* 11/12 */
+.column-12 { width: 100%; } /* 12/12 */
