@@ -77,3 +77,17 @@ header {
 .clearfix::after {
   clear: both;
 }
+
+/* use the below (media-image and media-body classes) to align the image 
+  left of the text in each float box. without this the heading is below the image */
+.media-image {
+  float: left;
+}
+
+.media-body {
+  margin-top: 0;
+ }
+ 
+ .media-body h4 {
+  margin-top: 0;
+}
