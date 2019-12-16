@@ -82,12 +82,14 @@ header {
   left of the text in each float box. without this the heading is below the image */
 .media-image {
   float: left;
+  margin-right: 1.5em; /* add margin between image and text */
 }
 
 .media-body {
-  margin-top: 0;
+  overflow: auto; /* this creates a block formatting context(bfc) */
+  margin-top: 0; /* remove top margin created by lobotomized owl */
  }
  
  .media-body h4 {
-  margin-top: 0;
+  margin-top: 0; /* override top margin created by user agent */
 }
