@@ -101,10 +101,17 @@ header {
   display: block;
   clear: both;
 }
+/* use negative margins to align the row container with the main container */
+.row {
+  margin-left: -0.75em; /* aligns strength column box with running tips */
+  margin-right: -0.75em;
+}
 
 /* target all class columns for floating left */
 [class*="column-"] {
   float: left;
+  padding: 0 0.75em; /* adds gutter between columns */
+  margin-top: 0;
 }
 
 /* calculate the column width of each column based on 12 column format */
