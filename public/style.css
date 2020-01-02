@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #eee;
+  background-color: 709b90;
   font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -21,109 +21,3 @@ body * + * {
   max-width: 1080px;
   margin: 0 auto;
 }
-
-header {
-  padding: 1em 1.5em;
-  color: #fff;
-  background-color: #0072b0;
-  border-radius: 0.5em;
-  margin-bottom: 1.5em;
-}
-
-.main {
-  /* padding: 0 1.5em; */
-  padding: 0 1.5em 1.5em; /* add 1.5em bottom padding */
-  background-color: #fff;
-  border-radius: 0.5em;
-}
-
-/* .media {
-  float: left;
-  width: 50%;
-  padding: 1.5em;
-  background-color: #eee;
-  border-radius: 0.5em;
-} */
-
-.media {
-  float: left;
-  /*margin: 0 1.5em 1.5em 0;*/ /* add gutter */
-  /*width: calc(50% - 1.5em);*/ /* width-margin to avoid unwanted wrapping */
-  padding: 1.5em;
-  background-color: #eee;
-  border-radius: 0.5em;
-}
-
-/* use the :nth-child(odd) pseudo selector to ensure that every odd
-   element clears the float above it */
-   /* .media:nth-child(odd) {
-    clear: left;
-  } */
-
-/* use this style instead of html style="clear: both" */
-/* .clearfix::after {
-  display: block;
-  content: " ";
-  clear: both;
-} */
-
-/* use the ::before and ::after pseudo elements with table */
-/* this block is better than the previous because it fixes the margin 
-  collapsing for the before element (elements at start of main container) */
-.clearfix::before,
-.clearfix::after {
-  display: table;
-  content: " ";
-}
-.clearfix::after {
-  clear: both;
-}
-
-/* use the below (media-image and media-body classes) to align the image 
-  left of the text in each float box. without this the heading is below the image */
-.media-image {
-  float: left;
-  margin-right: 1.5em; /* add margin between image and text */
-}
-
-.media-body {
-  overflow: auto; /* this creates a block formatting context(bfc) */
-  margin-top: 0; /* remove top margin created by lobotomized owl */
- }
- 
- .media-body h4 {
-  margin-top: 0; /* override top margin created by user agent */
-}
-
-/* use the grid style to render the elements in 2 6 column formats */
-.row::after {
-  content: " "; /*same as clearfix */
-  display: block;
-  clear: both;
-}
-/* use negative margins to align the row container with the main container */
-.row {
-  margin-left: -0.75em; /* aligns strength column box with running tips */
-  margin-right: -0.75em;
-}
-
-/* target all class columns for floating left */
-[class*="column-"] {
-  float: left;
-  padding: 0 0.75em; /* adds gutter between columns */
-  margin-top: 0;
-}
-
-/* calculate the column width of each column based on 12 column format */
-.column-1 { width: 8.3333%; } /* 1/12 */
-.column-2 { width: 16.6667%; } /* 2/12 */
-.column-3 { width: 25%; } /* 3/12 */
-.column-4 { width: 33.3333%; } /* 4/12 */
-.column-5 { width: 41.6667%; } /* 5/12 */
-.column-6 { width: 50%; } /* 6/12 */
-.column-7 { width: 58.3333%; } /* 7/12 */
-.column-8 { width: 66.6667%; } /* 8/12 */
-.column-9 { width: 75%; } /* 9/12 */
-.column-10 { width: 83.3333%; } /* 10/12 */
-.column-11 { width: 91.6667% } /* 11/12 */
-.column-12 { width: 100%; } /* 12/12 */
