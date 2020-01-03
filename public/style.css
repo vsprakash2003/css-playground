@@ -44,7 +44,7 @@ body * + * {
   text-decoration: none; /* remove underline from link text */
 }
 
-/* apply margin between the items */
+/* apply margin between the items for spacing */
 .site-nav > li + li {
   margin-left: 1.5em;
 }
@@ -53,3 +53,42 @@ body * + * {
 .site-nav > .nav-right {
   margin-left: auto;
 }
+
+/* add white background color and padding to the three tiles */
+.tile {
+  padding: 1.5em;
+  background-color: #fff;
+}
+
+/* apply flexbox layout to the main container */
+.flex {
+  display: flex;
+}
+
+/* remove the top margin and apply space between the flex items */
+.flex > * + * {
+  margin-top: 0;
+  margin-left: 1.5em;
+}
+
+/* apply width of 2/3rd to main column */
+.column-main {
+  flex: 2;
+}
+
+/* apply width of 1/3rd to side column */
+.column-main {
+  flex: 1;
+}
+
+/* make the side bar a flex container with flex-direction: column */
+.column-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* apply flexgrow to items within side bar */
+.column-sidebar > .title {
+  flex: 1;
+} 
