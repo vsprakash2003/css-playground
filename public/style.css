@@ -21,3 +21,35 @@ body * + * {
   max-width: 1080px;
   margin: 0 auto;
 }
+
+/* make site-nav container and its children flex items */
+.site-nav { 
+  display: flex;
+  padding: 0.5em;
+  list-style-type: none;
+  background-attachment: #5f4b44;
+  border-radius: 0.2em;
+}
+
+/* override lobotomized owl */
+.site-nav > li {
+  margin-top: 0;
+}
+
+.site-nav > li >a {
+  display: block; /* make links block level */
+  padding: .5em 1em;
+  background-color: #cc6b5a;
+  color: white;
+  text-decoration: none; /* remove underline from link text */
+}
+
+/* apply margin between the items */
+.site-nav > li + li {
+  margin-left: 1.5em;
+}
+
+/* auto margin for the last item */
+.site-nav > .nav-right {
+  margin-left: auto;
+}
